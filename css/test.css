@@ -368,7 +368,7 @@ p {
 }
 
 .style div:hover {
-  flex: 3;
+  flex: 2;
   filter: contrast(1);
 }
 
