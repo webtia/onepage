@@ -330,14 +330,14 @@ main .bar1 {
   opacity: 0;
 }
 
-.sungle:hover a:after{
+/* .sungle:hover a:after{
   opacity: 1;
-}
-
-/* .sungle ul>li:hover:before{
-  background: rgba(0,0,0,0.3);
-  
 } */
+
+.sungle ul>li:hover a:after{
+  opacity: 1;
+  
+}
 
 
 
