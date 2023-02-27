@@ -300,7 +300,7 @@ main .bar1 {
   text-align: center;
   color: #fff;
   transition: 0.35s;
- z-index: 1;
+  z-index: 1;
  
 }
 
@@ -349,6 +349,9 @@ main .bar1 {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  /* border: 1px solid red; */
+  overflow: hidden;
+
 }
 
 .style {
@@ -360,6 +363,8 @@ main .bar1 {
   filter: grayscale(1);
   overflow: hidden;
   transition: 0.5s;
+ 
+  
 }
 
 .style:hover {
@@ -378,24 +383,27 @@ main .bar1 {
   text-align: center;
   width: inherit;
   height: inherit;
-  padding: 30px 0px 0px;
+  padding: 25px 6px 50px;
   box-sizing: border-box;
   transition: 0.5s;
+  
 }
 
-.style:hover .stl-text{top: 80%;}
+.style:hover .stl-text{top: 70%;}
 
 .stl-text h3 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 10px;
 }
+  
 
 stl-text h2 p{
   position: absolute;
   font-size: 25px;
   margin-bottom: 20px;
   font-weight: 600;
+ 
 }
 
 
@@ -467,11 +475,25 @@ input[name=tabmenu] {
 }
 
 
-.items:hover .store1 p{
+/* div.store1:hover p{
+  top: 50%;
+  left: 0;
+} */
+
+div.store2:hover p{
+  /* background: url(../image/store_04.png) repeat center center; */
+  top: 50%;
+  left: 0;
+}
+
+div.store3:hover p{
   /* background: url(../image/store_04.png) repeat center center; */
   top: 40%;
   left: 0;
 }
+
+
+
 
 
 
