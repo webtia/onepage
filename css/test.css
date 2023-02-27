@@ -318,23 +318,26 @@ main .bar1 {
 }
 
 
-.sungle a:before{
+.sungle a:after{
   content: '';
-  position: relative;
-  display: inline-block;
-  width: inherit;
-  height: inherit;
+  position: absolute;
+  display: block;
   top: 0;
   left: 0;
-  border: 1px solid red;
-  
-  
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
 }
 
-.sungle ul>li:hover:before{
+.sungle:hover a:after{
+  opacity: 1;
+}
+
+/* .sungle ul>li:hover:before{
   background: rgba(0,0,0,0.3);
   
-}
+} */
 
 
 
