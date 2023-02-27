@@ -318,7 +318,7 @@ main .bar1 {
 }
 
 
-.sungle li:before{
+.sungle a:before{
   content: '';
   position: relative;
   display: inline-block;
@@ -331,7 +331,7 @@ main .bar1 {
   
 }
 
-.sungle li:hover:before{
+.sungle ul>li:hover:before{
   background: rgba(0,0,0,0.3);
   
 }
