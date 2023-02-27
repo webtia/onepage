@@ -125,7 +125,7 @@ section {
 
 
 .main {
-  width: 1200px;
+  width: 100;
   height: 820px;
   background: url(../image/main.jpg) no-repeat center center / auto 850px fixed;
   /* 백그라운드 사이즈: 가로, 세로 (cover, contain) */
@@ -172,9 +172,8 @@ main .bar1 {
 
 /*-------------- Collaboration--------------------*/
 .card {
-  width: calc(45% - 4px);
+  /* width: calc(45% - 4px); */
   /* inline의 3~4px을 꼭 생각하고 가로 사이즈 정하기 */
-  height: 530px;
   /* background: #fff; */
   display: inline-block;
   /* vertical-align: top; */
@@ -190,7 +189,7 @@ main .bar1 {
   height: 530px;
 }
 
-p {
+.card p {
   font-size: 25px;
   font-weight: 400;
   width: 350px;
@@ -246,40 +245,8 @@ p {
   width: 1200px;
   height: 390px;
   /* border: 1px solid #000; */
-  /* overflow: hidden; */
   padding: 20px 0 0 0;
 }
-.sungle li {
-  display: inline-block;
-  width: 170px;
-  height: 170px;
-  margin-bottom: 5px;
-  /* overflow: hidden; */
-  transition: 0.5s;
-  
-    }
-
-
-.squre1 li a:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  width: inherit;
-  height: inherit;
-  background: rgba(0,0,0,0.3);
-  transition: 0.3s;
-  color: #fff;
- 
-}
-
-.sungle li img:hover a:before {
-  top: 100%;
-  
-}
-
-
-
-
 
 .squre1,
 .squre2,
@@ -290,6 +257,7 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
+ 
 }
 
 .squre1 {}
@@ -299,87 +267,152 @@ p {
 .squre3 {}
 
 
-
-
 .sungle01 img,
 .sungle05 img,
 .sungle09 img {
   border-radius: 50% 0 0 0;
 }
 
+.sungle li {
+  display: inline-block;
+  width: 170px;
+  height: 170px;
+   margin-bottom: 5px;
+   overflow: hidden;
+   transition: 0.5s;
+  }
+
+  .sungle li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 3;
+    
+    
+  }
+
+ 
+.sungle li a span{
+  font-size: 15px;
+  top: 200%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+ 
+ 
+}
+
+.sungle li:hover a span{
+   /* border: 1px solid #000; */
+   display: block;
+   top: 100px;
+   left: 0;
+ 
+}
+
+.sungle li:hover {
+  /* border: 1px solid #000; */
+  border-radius: 50% 0 0 0;
+
+}
 
 
+.sungle li:before{
+  content: '';
+  position: relative;
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+  
+  
+}
 
-
+.sungle li:hover:before{
+  background: rgba(0,0,0,0.3);
+  
+}
 
 
 
 /*-------------- style--------------------*/
 
 
-.style {
+.style-box{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.style ul {
+.style {
   position: relative;
-}
-
-.style ul p {
-  position: absolute;
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 600;
-
-}
-
-.style div {
   width: 500px;
   height: 678px;
-  border-right: 5px solid transparent;
-  /* #ffd0fb */
+  /* border-right: 0px solid transparent; */
   flex: 1;
-  position: relative;
   filter: grayscale(1);
   overflow: hidden;
   transition: 0.5s;
 }
 
-.style01 {
-  background: url(../image/style_01.png) no-repeat center center;
-  border-radius: 15px 0 0 15px;
-}
-
-.style02 {
-  background: url(../image/style_02.png) no-repeat center center;
-}
-
-.style03 {
-  background: url(../image/style_03.png) no-repeat center center;
-}
-
-.style04 {
-  background: url(../image/style_04.png) no-repeat center center;
-}
-
-.style05 {
-  background: url(../image/style_05.png) no-repeat center center;
-  border-radius: 0 15px 15px 0;
-}
-
-.style div:hover {
+.style:hover {
   flex: 2;
   filter: contrast(1);
 }
 
-/* ------------지점안내-슬라이드-------------------- */
 
-/* .tab-inner{height: 700px;} */
-/* .tab-inner h1{
-  text-align: left;
-  font-size: 40px;
+
+.stl-text{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  width: inherit;
+  height: inherit;
+  padding: 30px 0px 0px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.style:hover .stl-text{top: 80%;}
+
+.stl-text h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+stl-text h2 p{
+  position: absolute;
+  font-size: 25px;
+  margin-bottom: 20px;
   font-weight: 600;
+}
+
+
+
+/* .style li:nth-child(1){background: url(../image/style_01.png) no-repeat center center;
+  border-radius: 15px 0 0 15px;
+}
+.style li:nth-child(2) {background: url(../image/style_02.png) no-repeat center center;
+}
+.style li:nth-child(3) {background: url(../image/style_03.png) no-repeat center center;
+}
+.style li:nth-child(4) {background: url(../image/style_04.png) no-repeat center center;
+}
+.style li:nth-child(5) {background: url(../image/style_05.png) no-repeat center center;
+  border-radius: 0 15px 15px 0;
 } */
+
+
+
+/* ------------지점안내-슬라이드-------------------- */
 
 input[name=tabmenu] {
   display: none;
@@ -396,34 +429,48 @@ input[name=tabmenu] {
   /* border: 1px solid red; */
   width: 4800px;
   height: 678px;
-  position: absolute;
   top: 0;
   left: 0;
-  text-align: center;
-  transition: 0.5s;
-}
+  transition: 0.35s;
+  position: relative;
+  overflow: hidden;   
+ }
 
-.items div {
-  width: 1200px;
-  height: 678px;
-  float: left;
-  box-sizing: border-box;
-  /* padding: 50px; */
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  transition: 0.5s; */
-}
 
 .items div img {
   width: 1200px;
+  height: 678px;
+  float: left;
   border-radius: 50% 45% 65% 48%;
+   
 }
 
-.items div p b {}
+.items p{
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 100%;
+  left: 0;
+  width: 1200px;
+  height: 100px;
+  color: #fff;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  overflow:hidden;
 
-.items div p span {}
+  
+}
+
+
+.items:hover .store1 p{
+  /* background: url(../image/store_04.png) repeat center center; */
+  top: 40%;
+  left: 0;
+}
+
+
 
 
 
@@ -448,17 +495,9 @@ input[id=tab3]:checked~.btn label[for=tab3] {
   border-radius: 50%;
 }
 
-input[id=tab1]:checked~.tab .items {
-  left: 0;
-}
-
-input[id=tab2]:checked~.tab .items {
-  left: -1200px;
-}
-
-input[id=tab3]:checked~.tab .items {
-  left: -2400px;
-}
+input[id=tab1]:checked~.tab .items {left: 0;}
+input[id=tab2]:checked~.tab .items {left: -1200px;}
+input[id=tab3]:checked~.tab .items {left: -2400px;}
 
 
 
@@ -467,13 +506,9 @@ input[id=tab3]:checked~.tab .items {
 
 
 
-#container .store {
-  position: relative;
-  overflow: hidden;
-  padding-bottom: 75%;
-}
 
-.video {
+
+/* .video {
   min-width: 100%;
   min-height: 100%;
   position: absolute;
@@ -495,34 +530,7 @@ input[id=tab3]:checked~.tab .items {
   padding-bottom: 56.25%;
   overflow: hidden;
   position: relative;
-}
-
-.store {
-  display: flex;
-  margin-left: 10px;
-}
-
-div.box {
-  width: 300px;
-  height: 400px;
-  background: #fff;
-  border: 1px solid red;
-  position: relative;
-
-}
-
-.store div img {
-  width: 1200px;
-  height: 675px;
-
-  opacity: 0.95;
-  position: absolute;
-
-
-
-}
-
-
+} */
 
 div.box1 {}
 
