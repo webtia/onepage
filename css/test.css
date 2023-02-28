@@ -328,14 +328,14 @@ main .bar1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,1);
   opacity: 0;
   transition: 0.35s;
 }
 
 
 .sungle ul>li:hover a:after{
-  opacity: 0.5;
+  opacity: 0.8;
   
 }
 
@@ -348,7 +348,7 @@ main .bar1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 678px;
   /* border: 1px solid red; */
   overflow: hidden;
 
@@ -383,22 +383,23 @@ main .bar1 {
   text-align: center;
   width: inherit;
   height: inherit;
-  padding: 25px 6px 50px;
+  padding: 25px 70px 0px 0px;
   box-sizing: border-box;
   transition: 0.5s;
   
 }
 
-.style:hover .stl-text{top: 70%;}
+.style:hover .stl-text{top: 80%;}
 
 .stl-text h3 {
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 10px;
+ 
 }
   
 
-stl-text h2 p{
+.stl-text h2 p{
   position: absolute;
   font-size: 25px;
   margin-bottom: 20px;
@@ -475,10 +476,10 @@ input[name=tabmenu] {
 }
 
 
-/* div.store1:hover p{
+div.store1:hover p{
   top: 50%;
   left: 0;
-} */
+}
 
 div.store2:hover p{
   /* background: url(../image/store_04.png) repeat center center; */
