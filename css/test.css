@@ -449,13 +449,13 @@ input[name=tabmenu] {
  }
 
 
-.items div img {
+/* .items div img {
   width: 1200px;
   height: 678px;
   float: left;
   border-radius: 50% 45% 65% 48%;
    
-}
+} */
 
 .items p{
   font-size: 50px;
@@ -471,9 +471,27 @@ input[name=tabmenu] {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
   overflow:hidden;
+  opacity: 0;
+ }
 
-  
+div.store1, div.store2, div.store3 {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+
 }
+
+
+
+ .items > div {
+  display: block;
+  width: 1200px;
+  height: 100%;
+  float: left;
+  border-radius: 50% 45% 65% 48%;
+  overflow: hidden;
+ }
+
 
 
 div.store1:hover p{
@@ -481,7 +499,7 @@ div.store1:hover p{
   left: 0;
 }
 
-div.store2:hover p{
+div.store2:hover  p{
   /* background: url(../image/store_04.png) repeat center center; */
   top: 50%;
   left: 0;
