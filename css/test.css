@@ -20,7 +20,7 @@ body {
 }
 
 .bar {
-  width: 1150px;
+  width: 1200px;
   height: 1px;
   background: #000;
   margin-bottom: 40px;
@@ -175,13 +175,15 @@ main .bar1 {
   /* width: calc(45% - 4px); */
   /* inline의 3~4px을 꼭 생각하고 가로 사이즈 정하기 */
   /* background: #fff; */
-  display: inline-block;
+  display: inline-block; /*  */
   /* vertical-align: top; */
   width: 350px;
   height: 530px;
-  padding-left: 2%;
   overflow: hidden;
   transition: 0.5s;
+}
+.card + .card{ /* 뒤에 오는 것들에만 적용됨 */
+  padding-left: calc(1200 - 354*3)/2;
 }
 
 .card img {
@@ -471,25 +473,19 @@ input[name=tabmenu] {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
   overflow:hidden;
-  opacity: 0;
+  opacity: 1;
+  transition: 0.5s;
  }
-
-div.store1, div.store2, div.store3 {
-  position: relative;
-  width: 1200px;
-  height: 100%;
-
-}
 
 
 
  .items > div {
-  display: block;
   width: 1200px;
   height: 100%;
   float: left;
   border-radius: 50% 45% 65% 48%;
   overflow: hidden;
+  position: relative;
  }
 
 
@@ -499,7 +495,7 @@ div.store1:hover p{
   left: 0;
 }
 
-div.store2:hover  p{
+div.store2:hover p{
   /* background: url(../image/store_04.png) repeat center center; */
   top: 50%;
   left: 0;
@@ -507,7 +503,7 @@ div.store2:hover  p{
 
 div.store3:hover p{
   /* background: url(../image/store_04.png) repeat center center; */
-  top: 40%;
+  top: 50%;
   left: 0;
 }
 
