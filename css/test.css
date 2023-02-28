@@ -1,7 +1,7 @@
 @import url(common.css);
 
 body {
-  background: url(../image/bg_01.jpg) repeat center center /cover;
+  background: url(../image/bg_01.jpg) repeat center top /cover;
 }
 
 .inner {
