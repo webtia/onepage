@@ -183,7 +183,7 @@ main .bar1 {
   transition: 0.5s;
 }
 .card + .card{ /* 뒤에 오는 것들에만 적용됨 */
-  padding-left: calc(1200 - 354*3)/2;
+  padding-left: calc((1200px - 354px*3)/2);  /* calc 단위가 다른 것들을 같은 단위로 처리해서 */ 
 }
 
 .card img {
@@ -253,8 +253,8 @@ main .bar1 {
 .squre1,
 .squre2,
 .squre3 {
-  width: 390px;
-  height: 390px;
+  width: 400px;
+  height: auto;
   float: left;
   justify-content: center;
   align-items: center;
