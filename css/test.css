@@ -4,6 +4,9 @@ body {
   background: url(../image/bg_01.jpg) repeat center top /cover;
 }
 
+
+html {scroll-behavior: smooth; /* 부드럽게 */}
+
 .inner {
   width: 1200px;
   margin: 0 auto;
@@ -125,7 +128,7 @@ section {
 
 
 .main {
-  width: 100;
+  width: 1200px;
   height: 820px;
   background: url(../image/main.jpg) no-repeat center center / auto 850px fixed;
   /* 백그라운드 사이즈: 가로, 세로 (cover, contain) */
@@ -181,6 +184,7 @@ main .bar1 {
   height: 530px;
   overflow: hidden;
   transition: 0.5s;
+  position: relative;
 }
 .card + .card{ /* 뒤에 오는 것들에만 적용됨 */
   padding-left: calc((1200px - 354px*3)/2);  /* calc 단위가 다른 것들을 같은 단위로 처리해서 */ 
@@ -192,7 +196,7 @@ main .bar1 {
 }
 
 .card p {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
   width: 350px;
   height: 100px;
@@ -224,12 +228,12 @@ main .bar1 {
 
 .content {
   position: absolute;
-  top: 0;
-  left: 0;
+  /* top: 430px; */
+  /* left: 70px; */
   text-align: center;
   width: inherit;
   height: inherit;
-  box-sizing: boder-box;
+  box-sizing: border-box;
   transition: 0.5s;
 }
 .card:hover h2 {
@@ -604,7 +608,7 @@ div.box3 {}
 address {
   font-style: normal;
   font-size: 12px;
-  font-weight: 200px;
+  font-weight: 200;
   padding: 50px;
 
 }
